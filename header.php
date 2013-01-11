@@ -1,6 +1,6 @@
 
 <html>
-
+<link rel="shortcut icon" href="http://t3.gstatic.com/images?q=tbn:ANd9GcTtLuVpDj_Ci4idOFbLD4suNjQueIFxQIa0fpOx0n8ZOeZcZBan">
 <head>
 <?
 session_start();
@@ -15,7 +15,7 @@ if($_SESSION['name_sesion']!=''){echo"<meta http-equiv= 'Refresh' content='540; 
 
 <style type="text/css">
    body {
-		background-image: url(Images/spec/BG.jpg);
+		background-image: url(images/spec/BG.jpg);
 		}
   </style>
 

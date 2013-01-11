@@ -17,15 +17,17 @@ if ($_GET['deld'])
         $base->sql_execute();
 }
 
-
   $misjac=date('m');
+
   $year=date('Y');
-   if($_GET['m']){$misjac=$m;}
-  // Вычисляем число дней в текущем месяце
+
+
+if(($_GET['m']!='') && ($_GET['m']<=12) && ($_GET['m']>0) && ((int)$_GET['m'])){$misjac=$_GET['m'];}
   $t_start = new DateTime($year."-".$misjac."-01");
- $dayofmonth=$t_start->format('t');
- /* $dayofmonth=date("t",mktime($t_start->format('t'));
-  echo $dayofmonth;*/
+
+  $dayofmonth=$t_start->format('t');
+
+
 
   //число дня
   $n=date('j');
@@ -37,6 +39,7 @@ if ($_GET['deld'])
   $num = 0;
   for($i = 0; $i < 7; $i++)
   {
+
     // Вычисляем номер дня недели для числа
     $dayofweek = date('w',mktime(0, 0, 0, $misjac, $day_count, date('Y')));
     // Приводим к числа к формату 1 - понедельник, ..., 6 - суббота
@@ -74,9 +77,7 @@ if ($_GET['deld'])
     if($day_count > $dayofmonth) break;
   }
 
-  // 3. Выводим содержимое массива $week
-  // в виде календаря
-  // Выводим таблицу
+
   $arr = array('Понеділок','Вівторок','Середа','Четвер','Пятниця','Субота','Неділя');
 	$num_mis = array('Січень','Лютий','Березень','Квітень','Травень','Червень','Липень','Серпень','Вересень','Жовтень','Листопад','Грудень');
 		

@@ -61,6 +61,7 @@ if (isset($_FILES["filename"]["tmp_name"])) {
    if(is_uploaded_file($_FILES["filename"]["tmp_name"]))
    {
     move_uploaded_file($_FILES["filename"]["tmp_name"], "sheets/".date("i-s").$_FILES["filename"]["name"]);
+
 	$base->logs("Закинув графік (".$_FILES["filename"]["name"].")");
 	
 //Підключення класу для читання  
@@ -68,10 +69,16 @@ include_once("Class/class reader.php");
 include_once("Class/func-date.php");
 require_once "Class/mysql-class.php";
 if ($_GET['active']){echo "<script type='text/javascript'> var active=true; </script>";}
+
 $data = new XLSToDB(date("i-s").$_FILES["filename"]["name"], 'CP1251');
+
 $fileXLS=date("i-s").$_FILES["filename"]["name"];
+
 $links="sheets/".date("i-s").$_FILES["filename"]["name"];
 $base = new class_mysql_base();
+
+echo "<br>";
+
 
 	//Визначаєм кількість листів
 	$num=$data->getshet($fileXLS)-1;
