@@ -1,0 +1,149 @@
+
+  body 
+  {
+	margin:0px;
+	padding:0px;
+	font-size: 9pt;
+	font-color: black;
+	text-shadow:#bfbfbf 0px 0px 5px;
+	font: 12pt arial; 
+    /*background:#fff;*/
+ 
+  }
+
+ hr {
+padding-bottom: 1px;
+background-color: green;
+border-bottom:1px solid white;
+border-left:1px solid white;
+} 
+
+div.auth-form {
+    -moz-box-sizing: border-box;
+    background-color: #D5FBFA;
+    border: 1px solid #B2BCD9;
+    margin: 16px 0;
+    padding: 8px;
+    width: 95%;
+}
+div.auth-form-min {
+    -moz-box-sizing: border-box;
+    background-color: #D5FBFA;
+    border: 1px solid #B2BCD9;
+    margin: 16px 0;
+    padding: 8px;
+    width: 70%;
+}	
+ A IMG {
+    border: none; /* Убираем рамку */
+   } 
+   
+   
+	a{color: #074404;font-size: 15pt;text-decoration:none;}
+	a:hover{color: black;outline: none;font-size: 15pt;background: #f8dd80;text-decoration:underline;}
+	a:active{color: green;outline: none;}
+    
+table.t_example {background-color: #cccccc;}
+.t_example tr {background-color: #ffffff;}
+.ob {border: 1px solid #434343;padding: 10px;background: #e3e3e3;-moz-border-radius: 10px;-webkit-border-radius: 10px;width: 95%}
+.circle {border: 2px solid green;background: #e3e3e3;-moz-border-radius: 8px;-webkit-border-radius: 8px;}
+.text{font-size: 10pt; /* Размер шрифта в пунктах */ }
+.TD_b{padding: 1px;border-right: 1px solid #666; border-bottom: 1px solid #666; }
+/*-------------------------------------------------------------------*/
+a.menu
+{
+color: black;
+text-decoration:none;
+font-size: 13pt;
+}
+a.menu:active
+{
+color: green;
+text-decoration:none;
+font-size: 13pt;
+}
+a.menu:hover
+{
+color: blue;
+text-decoration:none;
+font-size: 13pt;
+} 
+/*-------------------------------------------------------------------*/
+a.text
+{
+color: black;
+text-decoration:none;
+font-size: 16pt;
+}
+a.text:active
+{
+color: green;
+text-decoration:none;
+font-size: 16pt;
+}
+a.text:hover
+{
+color: blue;
+background: #f8dd80;
+text-decoration:none;
+font-size: 16pt;
+} 
+/*-------------------------------------------------------------------*/ 
+  .hed
+  {
+    background-image: url(../images/header/x.jpg); 
+    background-repeat: repeat-x;
+  }  
+/*-------------------------------------Кнопочка------------------------------------*/  
+
+.trCollapsing .collapsing {
+    overflow : hidden;
+}
+
+.trCollapsing .collapsed {
+    background-color: #ddd;
+    cursor: s-resize;
+}
+
+/*-------------------------------------Підсказка------------------------------------*/ 
+.jQtooltip {
+  position: relative;
+  cursor: help;
+  border-bottom: 1px dotted;
+}
+.jQtooltip div {
+  display: none;
+  position: absolute;
+  bottom: -1px;
+  left: -1px;
+  z-index: 1000;
+  width: 190px;
+  padding: 8px 12px;
+  text-align: left;
+  font-size: 12px;
+  line-height: 16px;
+  color: #000;
+  -webkit-box-shadow: 0 1px 3px #C4C4C4;
+  -moz-box-shadow: 0 1px 3px #C4C4C4;
+  box-shadow: 0 1px 3px #C4C4C4;
+  border: 1px solid #DBB779;
+  background: #FFF6BD;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+}
+
+.jQtooltip.mini {
+  display: inline-block;
+  vertical-align: bottom;
+  font-size: 11px;
+  width: 14px;
+  line-height: 13px;
+  text-align: center;
+  margin-left: 2px;
+  top: -2px;
+  color: #9A4D18;
+  border: 1px solid #FAD28F;
+  background: #FFF6BD;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+}
