@@ -1,0 +1,34 @@
+.tCpseTR {
+}
+
+.tCpseTR .tCpseContainer {
+    overflow : hidden;
+}
+
+.tCpseTR .tCpseIndicator,.tCpseTR .tCpseContainer {
+    margin:0;
+    padding:0;
+    background: none;
+}
+
+
+.tCpseTR .tCpseContainerCollapsed {
+    background: no-repeat bottom url(../Images/spec/dots.png);
+    background-color: #f8dd80;
+    cursor: s-resize;
+}
+
+
+
+
+#tCpsePreview {
+
+    border:1px solid #000;
+    display: none;
+    position:absolute;
+    margin: 0;
+    margin: 0;
+    z-index:10;
+
+}
+
