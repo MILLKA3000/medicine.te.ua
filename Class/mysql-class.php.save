@@ -16,7 +16,7 @@
   var $sql_passwd="kolobok";
   var $sql_database="mis";
 //var $sql_host="192.168.1.222";
-    var $sql_host="127.0.0.1";
+    var $sql_host=";
   
   var $conn_id;
   var $sql_query;

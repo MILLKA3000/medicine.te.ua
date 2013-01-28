@@ -1,39 +1,15 @@
-п»їgoogle.load("visualization", "1", {packages:["corechart"]});
+google.load('visualization', '1', {packages:['corechart']});
       google.setOnLoadCallback(drawChart);
       function drawChart() {
+		
         var data = new google.visualization.DataTable();
-        data.addColumn('string', 'Р’РёРґ РѕС†С–РЅРѕРє');
-        data.addColumn('number', 'Р—Р°РіР°Р»СЊРЅР°');
-        data.addRows([
-          ['2', zag_2],
-          ['3', zag_3],
-          ['4', zag_4],
-          ['5', zag_5]
-        ]);
-        var data2 = new google.visualization.DataTable();
-            data2.addColumn('string', 'Р’РёРґ РѕС†С–РЅРѕРє');
-            data2.addColumn('number', 'Р‘СЋРґР¶РµС‚');
-            data2.addColumn('number', 'РљРѕРЅС‚СЂР°РєС‚');
-            data2.addRows([
-           ['2', zag_2_b,zag_2_k],
-           ['3', zag_3_b,zag_3_k],
-           ['4', zag_4_b,zag_4_k],
-           ['5', zag_5_b,zag_5_k]
-        ]);
-            
-        
-        var options = {
-          title: 'Р—Р°РіР°Р»СЊРЅРёР№ РіСЂР°С„С–Рє СѓСЃРїС–С€РЅРѕСЃС‚С–',
-          hAxis: {title: 'Р’РёРґ РѕС†С–РЅРѕРє', titleTextStyle: {color: 'green'}}
+        data.addColumn('string', 'Кількість пацієнтів');
+        data.addColumn('number', 'Кількість пацієнтів');
+		for (var i=0;i<mas.length;i++){
+		data.addRows([[String(i+1), parseFloat(mas[i])]]);
+		}	
+         var options = {legend: 'none',title: 'Кількість пацієнтів записаних по місячно', hAxis: { title: 'Місяць', titleTextStyle: {color: 'green'} }
         };
-        var options2 = {
-          title: 'Р“СЂР°С„С–Рє СѓСЃРїС–С€РЅРѕСЃС‚С– РїРѕ С‚РёРїСѓ РЅР°РІС‡Р°РЅРЅСЏ',
-          hAxis: {title: 'Р’РёРґ РѕС†С–РЅРѕРє', titleTextStyle: {color: 'green'}}
-        };
-
         var chart = new google.visualization.ColumnChart(document.getElementById('chart_div'));
         chart.draw(data, options);
-        var chart2 = new google.visualization.ColumnChart(document.getElementById('chart_div2'));
-        chart2.draw(data2, options2);
       }
- 

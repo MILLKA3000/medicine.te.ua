@@ -1,4 +1,4 @@
-п»ї/**
+/**
  * Copyright (c) 2008 Kelvin Luck (http://www.kelvinluck.com/)
  * Dual licensed under the MIT (http://www.opensource.org/licenses/mit-license.php) 
  * and GPL (http://www.opensource.org/licenses/gpl-license.php) licenses.
@@ -1023,12 +1023,12 @@
 	};
 	// localisable text
 	$.dpText = {
-		TEXT_PREV_YEAR		:	'РџСЂРµРґС‹РґСѓС‰РёР№ РіРѕРґ',
-		TEXT_PREV_MONTH		:	'РџСЂРµРґС‹РґСѓС‰РёР№ РјРµСЃСЏС†',
-		TEXT_NEXT_YEAR		:	'РЎР»РµРґСѓСЋС‰РёР№ РіРѕРґ',
-		TEXT_NEXT_MONTH		:	'РЎР»РµРґСѓСЋС‰РёР№ РјРµСЃСЏС†',
-		TEXT_CLOSE			:	'Р—Р°РєСЂС‹С‚СЊ',
-		TEXT_CHOOSE_DATE	:	'<img border="0" title="Р’С‹Р±СЂР°С‚СЊ РґР°С‚Сѓ" src="c.png"> '
+		TEXT_PREV_YEAR		:	'Предыдущий год',
+		TEXT_PREV_MONTH		:	'Предыдущий месяц',
+		TEXT_NEXT_YEAR		:	'Следующий год',
+		TEXT_NEXT_MONTH		:	'Следующий месяц',
+		TEXT_CLOSE			:	'Закрыть',
+		TEXT_CHOOSE_DATE	:	'<img border="0" title="Выбрать дату" src="c.png"> '
 	};
 	// version
 	$.dpVersion = '$Id: jquery.datePicker.js 15 2008-12-17 04:40:18Z kelvin.luck $';

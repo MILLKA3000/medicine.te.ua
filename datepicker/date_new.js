@@ -1,4 +1,4 @@
-п»ї/*
+/*
  * Date prototype extensions. Doesn't depend on any
  * other code. Doens't overwrite existing methods.
  *
@@ -6,7 +6,7 @@
  * isWeekend, isWeekDay, getDaysInMonth, getDayName, getMonthName, getDayOfYear, getWeekOfYear,
  * setDayOfYear, addYears, addMonths, addDays, addHours, addMinutes, addSeconds methods
  *
- * Copyright (c) 2006 JГ¶rn Zaefferer and Brandon Aaron (brandon.aaron@gmail.com || http://brandonaaron.net)
+ * Copyright (c) 2006 Jorn Zaefferer and Brandon Aaron (brandon.aaron@gmail.com || http://brandonaaron.net)
  *
  * Additional methods and properties added by Kelvin Luck: firstDayOfWeek, dateFormat, zeroTime, asString, fromString -
  * I've added my name to these methods so you know who to blame if they are broken!
@@ -17,11 +17,11 @@
  *
  
 
-days: ["Р’РѕСЃРєСЂРµСЃРµРЅСЊРµ", "РџРѕРЅРµРґРµР»СЊРЅРёРє", "Р’С‚РѕСЂРЅРёРє", "РЎСЂРµРґР°", "Р§РµС‚РІРµСЂРі", "РџСЏС‚РЅРёС†Р°", "РЎСѓР±Р±РѕС‚Р°", "Р’РѕСЃРєСЂРµСЃРµРЅСЊРµ"],
-daysShort: ["Р’СЃРє", "РџРЅРґ", "Р’С‚СЂ", "РЎСЂРґ", "Р§С‚РІ", "РџС‚РЅ", "РЎР±С‚", "Р’СЃРє"],
-daysMin: ["Р’СЃ", 'РџРЅ', 'Р’С‚', 'РЎСЂ', 'Р§С‚', 'РџС‚', 'РЎР±', "Р’СЃ"],
-months: ["РЇРЅРІР°СЂСЊ", "Р¤РµРІСЂР°Р»СЊ", "РњР°СЂС‚", "РђРїСЂРµР»СЊ", "РњР°Р№", "РСЋРЅСЊ", "РСЋР»СЊ", "РђРІРіСѓСЃС‚", "РЎРµРЅС‚СЏР±СЂСЊ", "РћРєС‚СЏР±СЂСЊ", "РќРѕСЏР±СЂСЊ", "Р”РµРєР°Р±СЂСЊ"],
-monthsShort: ['РЇРЅРІ', 'Р¤РµРІ', 'РњР°СЂ', 'РђРїСЂ', 'РњР°Р№', 'РСЋРЅ', 'РСЋР»', 'РђРІРі', 'РЎРµРЅ', 'РћРєС‚', 'РќРѕСЏ', 'Р”РµРє'],
+days: ["Воскресенье", "Понедельник", "Вторник", "Среда", "Четверг", "Пятница", "Суббота", "Воскресенье"],
+daysShort: ["Вск", "Пнд", "Втр", "Срд", "Чтв", "Птн", "Сбт", "Вск"],
+daysMin: ["Вс", 'Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб', "Вс"],
+months: ["Январь", "Февраль", "Март", "Апрель", "Май", "Июнь", "Июль", "Август", "Сентябрь", "Октябрь", "Ноябрь", "Декабрь"],
+monthsShort: ['Янв', 'Фев', 'Мар', 'Апр', 'Май', 'Июн', 'Июл', 'Авг', 'Сен', 'Окт', 'Ноя', 'Дек'],
  */
 /**
  * An Array of day names starting with Sunday.
@@ -33,7 +33,7 @@ monthsShort: ['РЇРЅРІ', 'Р¤РµРІ', 'РњР°СЂ', 'РђРїСЂ', 'РњР°Р№', 'РСЋРЅ', 'РСЋР
  * @type Array
  * @cat Plugins/Methods/Date
  */
-Date.dayNames = ["Р’РѕСЃРєСЂРµСЃРµРЅСЊРµ", "РџРѕРЅРµРґРµР»СЊРЅРёРє", "Р’С‚РѕСЂРЅРёРє", "РЎСЂРµРґР°", "Р§РµС‚РІРµСЂРі", "РџСЏС‚РЅРёС†Р°", "РЎСѓР±Р±РѕС‚Р°"];
+Date.dayNames = ["Воскресенье", "Понедельник", "Вторник", "Среда", "Четверг", "Пятница", "Суббота"];
 
 /**
  * An Array of abbreviated day names starting with Sun.
@@ -45,7 +45,7 @@ Date.dayNames = ["Р’РѕСЃРєСЂРµСЃРµРЅСЊРµ", "РџРѕРЅРµРґРµР»СЊРЅРёРє", "Р’С‚РѕСЂРЅ
  * @type Array
  * @cat Plugins/Methods/Date
  */
-Date.abbrDayNames = ['Р’СЃ', 'РџРЅ', 'Р’С‚', 'РЎСЂ', 'Р§С‚', 'РџС‚', 'РЎР±'];
+Date.abbrDayNames = ['Вс', 'Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб'];
 
 /**
  * An Array of month names starting with Janurary.
@@ -57,7 +57,7 @@ Date.abbrDayNames = ['Р’СЃ', 'РџРЅ', 'Р’С‚', 'РЎСЂ', 'Р§С‚', 'РџС‚', 'РЎР±'];
  * @type Array
  * @cat Plugins/Methods/Date
  */
-Date.monthNames = ["РЎС–С‡РµРЅСЊ", "Р›СЋС‚РёР№", "Р‘РµСЂРµР·РµРЅСЊ", "РљРІС–С‚РµРЅСЊ", "РўСЂР°РІРµРЅСЊ", "Р§РµСЂРІРµРЅСЊ", "Р›РёРїРµРЅСЊ", "РЎРµСЂРїРµРЅСЊ", "Р’РµСЂРµСЃРµРЅСЊ", "Р–РѕРІС‚РµРЅСЊ", "Р›РёСЃС‚РѕРїР°Рґ", "Р“СЂСѓРґРµРЅСЊ"];
+Date.monthNames = ["Січень", "Лютий", "Березень", "Квітень", "Травень", "Червень", "Липень", "Серпень", "Вересень", "Жовтень", "Листопад", "Грудень"];
 
 /**
  * An Array of abbreviated month names starting with Jan.
@@ -69,7 +69,7 @@ Date.monthNames = ["РЎС–С‡РµРЅСЊ", "Р›СЋС‚РёР№", "Р‘РµСЂРµР·РµРЅСЊ", "РљРІС–С‚Рµ
  * @type Array
  * @cat Plugins/Methods/Date
  */
-Date.abbrMonthNames = ['РЇРЅРІ', 'Р¤РµРІ', 'РњР°СЂ', 'РђРїСЂ', 'РњР°Р№', 'РСЋРЅ', 'РСЋР»', 'РђРІРі', 'РЎРµРЅ', 'РћРєС‚', 'РќРѕСЏ', 'Р”РµРє'];
+Date.abbrMonthNames = ['Янв', 'Фев', 'Мар', 'Апр', 'Май', 'Июн', 'Июл', 'Авг', 'Сен', 'Окт', 'Ноя', 'Дек'];
 
 /**
  * The first day of the week for this locale.

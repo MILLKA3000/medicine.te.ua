@@ -3,7 +3,7 @@
 		<Td width=20% valign='top'>
 
 <? 
-/*
+/*   
 include ("auth.php");
 if (!$_SESSION['name_sesion']){
 echo "	

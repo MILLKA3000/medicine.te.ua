@@ -64,6 +64,8 @@ echo"	<a class='menu' href='new_street.php'> Редагування вулиць</a><br>";
 echo"	<a class='menu' href='log.php'> Переглянути логи</a><br>";
 echo"	<a class='menu' href='user_upload.php'> Завантажити список користувачів</a><br>";
 echo"	<a class='menu' href='new_login.php'>Змінити логін користувача</a><br>";
+echo"	<a class='menu' href='zwit.php'>Недоліки по лікарях</a><br>";
+echo"	<a class='menu' href='stat.php'>Збір статистики</a><br>";    
 echo"<br><br><br><br><br><b><center><FONT size=4 color=blue>Ір входу</FONT></center></b><br> Локальна : ";
 print_r($_SERVER['REMOTE_ADDR']);
 echo"<br>Зовнішня : ";
@@ -82,6 +84,7 @@ echo"	<a class='menu' href='simeinuy.php'> Сімейний лікар </a><br>";
 if ($_SESSION['role']==5){
 //----------------------------меню Реєстратури-------------------------------
 echo"	<a class='menu' href='zwit.php'> Звіт лікарів</a><br>";
+echo"	<a class='menu' href='stat.php'>Збір статистики</a><br>";  
 
 }					
 		echo "
